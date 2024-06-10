@@ -43,7 +43,7 @@ export default function InputAuto({
         />
       </div>
 
-      {suggestions.length && suggestions.length < data.length && (
+      {suggestions.length >0 && suggestions.length < data.length && (
         <div
           className="suggestions flex border p-1 rounded-b-lg text-black bg-white max-w-[700px] w-[80%] mx-auto outline-none"
           style={{ display: isHideSuggs ? "none" : "block" }}
