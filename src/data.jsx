@@ -1,4 +1,17 @@
 import bali from './assets/bali.jpg';
+import bali2 from './assets/bali2.jpg';
+import maldives1 from './assets/maldives1.jpg';
+import maldives2 from './assets/maldives2.jpg';
+import dubai1 from './assets/dubai.jpg';
+import dubai2 from './assets/dubai2.jpg';
+import italy3 from './assets/italy3.jpg';
+import italy1 from './assets/italy1.jpg';
+import mauritius1 from './assets/mauritius1.jpg';
+import mauritius2 from './assets/mauritius2.jpg';
+import thailand1 from './assets/thailand1.jpg';
+import thailand2 from './assets/thailand2.jpg';
+import singapore1 from './assets/singapore1.jpg';
+import singapore2 from './assets/singapore2.jpg';
 
 export const locationData = [
     {
@@ -15,7 +28,7 @@ export const locationData = [
                 id:"2",
                 price:"21,000",
                 plan:"3N/4D",
-                image: bali
+                image: bali2
             }
         ]
     },
@@ -28,12 +41,12 @@ export const locationData = [
                 id:"1",
                 price:"32,550",
                 plan:"5N/6D",
-                image: bali
+                image: dubai1
             },{
                 id:"2",
                 price:"30,690",
                 plan:"4N/5D",
-                image: bali
+                image: dubai2
             }
         ]
     },
@@ -46,12 +59,12 @@ export const locationData = [
                 id:"1",
                 price:"65,700",
                 plan:"3N/4D",
-                image: bali
+                image: maldives1
             },{
                 id:"2",
                 price:"40,900",
                 plan:"3N/4D",
-                image: bali
+                image: maldives2
             }
         ]
     },
@@ -64,12 +77,12 @@ export const locationData = [
                 id:"1",
                 price:"22,000",
                 plan:"4N/5D",
-                image: bali
+                image: thailand1
             },{
                 id:"2",
                 price:"62,000",
                 plan:"7N/8D",
-                image: bali
+                image: thailand2
             }
         ]
     },
@@ -82,31 +95,33 @@ export const locationData = [
                 id:"1",
                 price:"33,000",
                 plan:"5N/6D",
-                image: bali
+                image: singapore1
             },{
                 id:"2",
                 price:"28,000",
                 plan:"4N/5D",
-                image: bali
+                image: singapore2
             }
         ]
     },
-    // {
-    //     id:6,
-    //     value:"MAURITIUS",
-    //     image:"",
-    //     packages:[
-    //         {
-    //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
-    //         }
-    //     ]
-    // },
+    {
+        id:6,
+        value:"MAURITIUS",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"24,000",
+                plan:"4N/5D",
+                image: mauritius1
+            },{
+                id:"2",
+                price:"34,000",
+                plan:"6N/7D",
+                image: mauritius2
+            }
+        ]
+    },
     // {
     //     id:7,
     //     value:"BAKU AZERBAIJAN",
@@ -139,22 +154,24 @@ export const locationData = [
     //         }
     //     ]
     // },
-    // {
-    //     id:9,
-    //     value:"EUROPE",
-    //     image:"",
-    //     packages:[
-    //         {
-    //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
-    //         }
-    //     ]
-    // },
+    {
+        id:9,
+        value:"ITALY",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"77,000",
+                plan:"2N/3D",
+                image: italy3
+            },{
+                id:"2",
+                price:"93,000",
+                plan:"6N/7D",
+                image: italy1
+            }
+        ]
+    },
     // {
     //     id:10,
     //     value:"VIETNAM",

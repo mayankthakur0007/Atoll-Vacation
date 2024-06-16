@@ -15,7 +15,7 @@ const Selections = () => {
       <Selection figure={borabora1} caption='Bali' duration="3N/4D" price="₹21,000" />
       <Selection figure={borabora2} caption='Maldives' duration="3N/4D" price="₹40,000"/>
       <Selection figure={maldives1} caption='Dubai' duration="4N/5D" price="₹35,000"/>
-      <Selection figure={maldives2} caption='Europe' duration="3N/4D" price="₹71,000"/>
+      <Selection figure={maldives2} caption='Italy' duration="3N/4D" price="₹77,000"/>
       <Selection figure={maldives3} caption='Mauritius' duration="3N/4D" price="₹22,000"/>
       <Selection figure={keywest} caption='Thailand' duration="4N/5D" price="₹22,000"/>
     </section>
