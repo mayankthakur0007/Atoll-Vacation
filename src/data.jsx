@@ -1,3 +1,5 @@
+import bali from './assets/bali.jpg';
+
 export const locationData = [
     {
         id:1,
@@ -7,11 +9,13 @@ export const locationData = [
             {
                 id:"1",
                 price:"38,316",
-                plan:"5N/6D"
+                plan:"5N/6D",
+                image: bali
             },{
                 id:"2",
-                price:"21,080",
-                plan:"3N/4D"
+                price:"21,000",
+                plan:"3N/4D",
+                image: bali
             }
         ]
     },
@@ -23,11 +27,13 @@ export const locationData = [
             {
                 id:"1",
                 price:"32,550",
-                plan:"5N/6D"
+                plan:"5N/6D",
+                image: bali
             },{
                 id:"2",
                 price:"30,690",
-                plan:"4N/5D"
+                plan:"4N/5D",
+                image: bali
             }
         ]
     },
@@ -39,11 +45,13 @@ export const locationData = [
             {
                 id:"1",
                 price:"65,700",
-                plan:"3N/4D"
+                plan:"3N/4D",
+                image: bali
             },{
                 id:"2",
                 price:"40,900",
-                plan:"3N/4D"
+                plan:"3N/4D",
+                image: bali
             }
         ]
     },
@@ -55,11 +63,13 @@ export const locationData = [
             {
                 id:"1",
                 price:"22,000",
-                plan:"4N/5D"
+                plan:"4N/5D",
+                image: bali
             },{
                 id:"2",
                 price:"62,000",
-                plan:"7N/8D"
+                plan:"7N/8D",
+                image: bali
             }
         ]
     },
@@ -71,11 +81,13 @@ export const locationData = [
             {
                 id:"1",
                 price:"33,000",
-                plan:"5N/6D"
+                plan:"5N/6D",
+                image: bali
             },{
                 id:"2",
                 price:"28,000",
-                plan:"4N/5D"
+                plan:"4N/5D",
+                image: bali
             }
         ]
     },

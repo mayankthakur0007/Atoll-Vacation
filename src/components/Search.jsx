@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { locationData } from "../data";
 import 'react-responsive-modal/styles.css';
-import { Modal } from 'react-responsive-modal';
+import ModalWrapper from "./modalWrapper";
 
 const Search = () => {
   const [open, setOpen] = useState(false);
-
+  const [selectedLocation,setSelectedLocation] = useState("")
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
   return (
@@ -48,52 +48,59 @@ const Search = () => {
             book now and save
           </p>
         </div>
-          <div className="my-4">
-            <label htmlFor="destination">Destination</label>
-            <select
-              name="destinations"
-              id="destination"
-              className="block w-full p-2 border rounded"
-            >
-              {locationData.map((item) => (
-                <option key={item.id} value={item.value}>
-                  {item.value}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="my-4">
-            <label htmlFor="checkIn">Check-In</label>
-            <input
-              type="date"
-              id="checkIn"
-              name="checkIn"
-              className="block w-full p-2 border rounded"
-            ></input>
-          </div>
-          <div className="my-4">
-            <label htmlFor="checkOut">Check-Out</label>
-            <input
-              type="date"
-              id="checkOut"
-              name="checkOut"
-              className="block w-full p-2 border rounded"
-            ></input>
-          </div>
-          <button onClick={onOpenModal} className="btn">
-            Rates & Availabilities
-          </button>
+        <div className="my-4">
+          <label htmlFor="destination">Destination</label>
+          <select
+            name="destinations"
+            id="destination"
+            onChange={(e) => {
+              setSelectedLocation(e.target.value);
+            }}
+            className="block w-full p-2 border rounded"
+          >
+            {locationData.map((item) => (
+              <option key={item.id} value={item.value}>
+                {item.value}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="my-4">
+          <label htmlFor="checkIn">Check-In</label>
+          <input
+            type="date"
+            id="checkIn"
+            name="checkIn"
+            className="block w-full p-2 border rounded"
+          ></input>
+        </div>
+        <div className="my-4">
+          <label htmlFor="checkOut">Check-Out</label>
+          <input
+            type="date"
+            id="checkOut"
+            name="checkOut"
+            className="block w-full p-2 border rounded"
+          ></input>
+        </div>
+        <button
+          onClick={() => {
+            if(document.getElementById("checkIn").value == "" || document.getElementById("checkOut").value == ""){
+              return false
+            } else onOpenModal();
+          }}
+          className="btn"
+        >
+          Rates & Availabilities
+        </button>
       </div>
       <div>
-      <Modal open={open} onClose={onCloseModal} center>
-        <h2>Simple centered modal</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
-          hendrerit risus, sed porttitor quam.
-        </p>
-      </Modal>
-    </div>
+        <ModalWrapper
+          open={open}
+          selectedLocation={selectedLocation}
+          onClose={onCloseModal}
+        />
+      </div>
     </section>
   );
 };

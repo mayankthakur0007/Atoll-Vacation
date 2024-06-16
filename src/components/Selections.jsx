@@ -12,12 +12,12 @@ import keywest from '../assets/keywest.jpg';
 const Selections = () => {
   return (
     <section className='container px-4 grid gap-2 sm:grid-cols-3 sm:grid-rows-2'>
-      <Selection figure={borabora1} caption='Bali' />
-      <Selection figure={borabora2} caption='Maldives' />
-      <Selection figure={maldives1} caption='Dubai' />
-      <Selection figure={maldives2} caption='Europe' />
-      <Selection figure={maldives3} caption='Mauritius' />
-      <Selection figure={keywest} caption='Thailand' />
+      <Selection figure={borabora1} caption='Bali' duration="3N/4D" price="₹21,000" />
+      <Selection figure={borabora2} caption='Maldives' duration="3N/4D" price="₹40,000"/>
+      <Selection figure={maldives1} caption='Dubai' duration="4N/5D" price="₹35,000"/>
+      <Selection figure={maldives2} caption='Europe' duration="3N/4D" price="₹71,000"/>
+      <Selection figure={maldives3} caption='Mauritius' duration="3N/4D" price="₹22,000"/>
+      <Selection figure={keywest} caption='Thailand' duration="4N/5D" price="₹22,000"/>
     </section>
   );
 };
