@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { locationData } from "../data";
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
+import emailjs from 'emailjs-com';
 
 const ModalWrapper = (props) => {
   const [formOpen, setOpenForm] = useState(false)
@@ -9,13 +10,13 @@ const ModalWrapper = (props) => {
     <Modal
       open={props.open}
       onClose={() => {
-        setOpenForm(false);
         props.onClose();
+        setOpenForm(false);
       }}
       center
     >
       {!formOpen && (
-        <div className="flex flex-row gap-2">
+        <div className="flex font-['Caveat'] flex-row gap-2">
           {locationData
             .find((e) => e.value == props.selectedLocation)
             ?.packages.map((ele) => (
@@ -33,7 +34,7 @@ const ModalWrapper = (props) => {
                     </h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    ₹{ele.price}
+                    ₹{ele.price} per person
                   </p>
                   <button
                     onClick={() => setOpenForm(true)}
@@ -63,24 +64,38 @@ const ModalWrapper = (props) => {
       )}
       {formOpen && (
         <form
-          class="max-w-md mx-auto"
+          class="max-w-md font-['Caveat'] mx-auto"
           onSubmit={(e) => {
             e.preventDefault();
-
+            emailjs
+              .sendForm(
+                "service_t0gp0uw",
+                "template_e8lx10t",
+                e.target,
+                "Pn1B5jbZsuJ6r56B7"
+              )
+              .then(
+                (result) => {
+                  result.preventDefault() //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+                },
+                (error) => {
+                  console.log(error.text);
+                }
+              );
           }}
         >
           <div class="relative z-0 w-full mb-5 group">
             <input
               type="email"
-              name="floating_email"
+              name="from_email"
               id="floating_email"
               class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             />
             <label
-              for="floating_email"
-              class="peer-focus:font-medium absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              for="from_email"
+              class="peer-focus:font-medium absolute text-xl text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Email address
             </label>
@@ -91,13 +106,13 @@ const ModalWrapper = (props) => {
               name="phone"
               id="phone"
               maxLength={10}
-              class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-xl text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             />
             <label
               for="phone"
-              class="peer-focus:font-medium absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              class="peer-focus:font-medium absolute text-xl text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Phone No.
             </label>
@@ -106,33 +121,17 @@ const ModalWrapper = (props) => {
             <div class="relative z-0 w-full mb-5 group">
               <input
                 type="text"
-                name="floating_first_name"
-                id="floating_first_name"
+                name="from_name"
+                id="from_name"
                 class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required
               />
               <label
-                for="floating_first_name"
-                class="peer-focus:font-medium absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                for="from_name"
+                class="peer-focus:font-medium absolute text-xl text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                First name
-              </label>
-            </div>
-            <div class="relative z-0 w-full mb-5 group">
-              <input
-                type="text"
-                name="floating_last_name"
-                id="floating_last_name"
-                class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required
-              />
-              <label
-                for="floating_last_name"
-                class="peer-focus:font-medium absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                Last name
+                Name
               </label>
             </div>
           </div>

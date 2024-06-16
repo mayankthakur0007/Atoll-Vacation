@@ -20,11 +20,11 @@ const Selection = ({ figure, caption,duration, price }) => {
         <figcaption className="absolute z-10 bottom-12 left-2 text-white text-2xl font-bold">
           {caption}
         </figcaption>
-        <figcaption className="absolute z-10 bottom-7 left-2 text-white text-l">
+        <figcaption className="absolute font-['Caveat'] z-10 bottom-7 left-2 text-white text-xl">
           {duration}
         </figcaption>
-        <figcaption className="absolute z-10 bottom-2 left-2 text-white text-l">
-          {price}
+        <figcaption className="absolute font-['Caveat'] z-10 bottom-2 left-2 text-white text-xl">
+          {price} per person
         </figcaption>
         <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
       </figure>

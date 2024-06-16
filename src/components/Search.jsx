@@ -5,12 +5,12 @@ import ModalWrapper from "./modalWrapper";
 
 const Search = () => {
   const [open, setOpen] = useState(false);
-  const [selectedLocation,setSelectedLocation] = useState("")
+  const [selectedLocation,setSelectedLocation] = useState(locationData[0].value)
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
   return (
     <section className="container px-4 my-16 grid gap-8 md:grid-cols-3">
-      <div className="md:col-span-2">
+      <div className="md:col-span-2  font-['Caveat'] text-2xl">
         <h3 className="uppercase font-extrabold mb-4">
           luxury included vacations
         </h3>
@@ -59,7 +59,10 @@ const Search = () => {
             className="block w-full p-2 border rounded"
           >
             {locationData.map((item) => (
-              <option key={item.id} value={item.value}>
+              <option
+                key={item.id}
+                value={item.value}
+              >
                 {item.value}
               </option>
             ))}
@@ -85,8 +88,11 @@ const Search = () => {
         </div>
         <button
           onClick={() => {
-            if(document.getElementById("checkIn").value == "" || document.getElementById("checkOut").value == ""){
-              return false
+            if (
+              document.getElementById("checkIn").value == "" ||
+              document.getElementById("checkOut").value == ""
+            ) {
+              return false;
             } else onOpenModal();
           }}
           className="btn"
