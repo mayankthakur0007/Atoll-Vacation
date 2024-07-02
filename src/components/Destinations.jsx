@@ -9,7 +9,7 @@ import maldives3 from '../assets/maldives3.jpg';
 const Destinations = () => {
   return (
     <section className='container px-4 flex flex-col items-center my-16'>
-      <h2 className='bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text mb-4'>All-inclusive Resorts</h2>
+      <h2 className='bg-black inline-block text-transparent bg-clip-text mb-4'>All-inclusive Resorts</h2>
       <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
         <div className='col-span-2 md:col-span-3 md:row-span-2'>
           <img

@@ -8,6 +8,7 @@ import Selections from './components/Selections';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import Features from './components/features';
+import SelectionsD from './components/SelectionsD';
 
 const App = () => {
   return (
@@ -15,9 +16,10 @@ const App = () => {
       <Navbar />
       <Hero />
       <Destinations />
-      <Search />
-      <Features />
       <Selections />
+      <Search />
+      <SelectionsD />
+      <Features />
       <Carousel />
       <Footer />
     </div>

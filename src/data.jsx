@@ -122,22 +122,22 @@ export const locationData = [
             }
         ]
     },
-    // {
-    //     id:7,
-    //     value:"BAKU AZERBAIJAN",
-    //     image:"",
-    //     packages:[
-    //         {
-    //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
-    //         }
-    //     ]
-    // },
+    {
+        id:7,
+        value:"CORDELIA CRUISE",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"26,000",
+                plan:"2N/3D"
+            },{
+                id:"2",
+                price:"26,000",
+                plan:"4N/5D"
+            }
+        ]
+    },
     // {
     //     id:8,
     //     value:"MALASIA",
@@ -236,117 +236,114 @@ export const locationData = [
     //         }
     //     ]
     // },
-    // {
-    //     id:14,
-    //     value:"KASHMIR",
-    //     image:"",
-    //     packages:[
-    //         {
-    //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
-    //         }
-    //     ]
-    // },
-    // {
-    //     id:15,
-    //     value:"HIMACHAL",
-    //     image:"",
-    //     packages:[
-    //         {
-    //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
-    //         }
-    //     ]
-    // },
-    // {
-    //     id:16,
-    //     value:"ANDAMAN AND NICOBAR",
-    //     image:"",
-    //     packages:[
-    //         {
-    //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
-    //         }
-    //     ]
-    // },
-    // {
-    //     id:17,
-    //     value:"KERELA",
-    //     image:"",
-    //     packages:[
-    //         {
-    //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
-    //         }
-    //     ]
-    // },
-    // {
-    //     id:18,
-    //     value:"RAJASTHAN",
-    //     image:"",
-    //     packages:[
-    //         {
-    //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
-    //         }
-    //     ]
-    // },
-    // {
-    //     id:19,
-    //     value:"LEH",
-    //     image:"",
-    //     packages:[
-    //         {
-    //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
-    //         }
-    //     ]
-    // },
+    {
+        id:14,
+        value:"KASHMIR",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"14,999",
+                plan:"4N/5D"
+            }
+        ]
+    },
+    {
+        id:15,
+        value:"HIMACHAL",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"14,999",
+                plan:"5N/6D"
+            }
+        ]
+    },
+    {
+        id:16,
+        value:"ANDAMAN AND NICOBAR",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"19,800",
+                plan:"5N/6D"
+            }
+        ]
+    },
+    {
+        id:17,
+        value:"KERELA",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"19,999",
+                plan:"4N/5D"
+            }
+        ]
+    },
+    {
+        id:18,
+        value:"RAJASTHAN",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"14,999",
+                plan:"3N/4D"
+            }
+        ]
+    },
+    {
+        id:19,
+        value:"LEH",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"18,000",
+                plan:"5N/6D"
+            }
+        ]
+    },
+    {
+        id:20,
+        value:"NORTH EAST",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"16,999",
+                plan:"4N/5D"
+            }
+        ]
+    },
+    {
+        id:20,
+        value:"GOA",
+        image:"",
+        packages:[
+            {
+                id:"1",
+                price:"12,400",
+                plan:"3N/4D"
+            }
+        ]
+    },
     // {
     //     id:20,
-    //     value:"NORTH EAST",
+    //     value:"GOA",
     //     image:"",
     //     packages:[
     //         {
     //             id:"1",
-    //             price:"",
-    //             plan:""
-    //         },{
-    //             id:"2",
-    //             price:"",
-    //             plan:""
+    //             price:"12,400",
+    //             plan:"3N/4D"
     //         }
     //     ]
-    // }
+    // },
+
 ]
 
