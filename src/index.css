@@ -62,6 +62,22 @@
     font-family: inherit;
     margin: 0;
   }
+
+  .points li {
+    font-size: 14px;
+    margin-left: 10px;
+    list-style-type: circle;
+ }
+  .dropdown .dropbtn1 {
+    font-size: 22px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: red;

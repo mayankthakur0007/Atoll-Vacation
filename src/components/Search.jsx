@@ -48,7 +48,7 @@ const Search = () => {
             book now and save
           </p>
         </div>
-        <div className="my-4 text-xl">
+        <div className="my-4 text-2xl">
           <label htmlFor="destination">Destination</label>
           <select
             name="destinations"
@@ -68,7 +68,7 @@ const Search = () => {
             ))}
           </select>
         </div>
-        <div className="my-4 text-xl">
+        <div className="my-4 text-2xl">
           <label htmlFor="checkIn">Check-In</label>
           <input
             type="date"
@@ -77,7 +77,7 @@ const Search = () => {
             className="block w-full p-2 border rounded"
           ></input>
         </div>
-        <div className="my-4 text-xl">
+        <div className="my-4 text-2xl">
           <label htmlFor="checkOut">Check-Out</label>
           <input
             type="date"

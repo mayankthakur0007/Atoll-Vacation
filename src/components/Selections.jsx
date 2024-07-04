@@ -12,10 +12,10 @@ import keywest from '../assets/keywest.jpg';
 const Selections = () => {
   return (
     <>
-      <div class="px-4 mb-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="px-8 text-center">
-          <h2 class="bg-black inline-block text-transparent bg-clip-text text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
-            {`Go International`}
+      <div className="px-4 mb-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="px-8 text-center">
+          <h2 className="bg-black inline-block text-transparent bg-clip-text text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
+            {`Go International Destinations`}
           </h2>
         </div>
       </div>
@@ -42,14 +42,14 @@ const Selections = () => {
         <Selection
           figure={maldives2}
           caption="Italy"
-          duration="3N/4D"
+          duration="2N/3D"
           price="₹77,000"
         />
         <Selection
           figure={maldives3}
           caption="Mauritius"
-          duration="3N/4D"
-          price="₹22,000"
+          duration="4N/5D"
+          price="₹32,999"
         />
         <Selection
           figure={keywest}

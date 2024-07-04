@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png"
-
+import logo from "../assets/logo.png";
+import mail from '../assets/mail.png';
+import phone from "../assets/phone.png";
 const Navbar = () => {
   const [navIsShown, setnavIsShown] = useState(false);
   const toggleNavIsShown = () => {
@@ -11,12 +12,20 @@ const Navbar = () => {
       <img className="mt-16" src={logo} width={200} height={100} />
       <ul className="hidden rounded-2xl md:flex">
         <li>
-          <div class="dropdown">
-            <button class="dropbtn font-bold">
-              Domestic
-              <i class="fa fa-caret-down"></i>
+          <div className="dropdown">
+            <button className="dropbtn font-bold">
+              Home
+              <i className="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content">
+          </div>
+        </li>
+        <li>
+          <div className="dropdown">
+            <button className="dropbtn font-bold">
+              Domestic
+              <i className="fa fa-caret-down"></i>
+            </button>
+            <div className="dropdown-content">
               <a href="#">Himachal Pradesh</a>
               <a href="#">Rajasthan</a>
               <a href="#">Kerela</a>
@@ -25,13 +34,13 @@ const Navbar = () => {
           </div>
         </li>
         <li>
-          <div class="dropdown">
-            <button class="dropbtn font-bold">
+          <div className="dropdown">
+            <button className="dropbtn font-bold">
               International
-              <i class="fa fa-caret-down"></i>
+              <i className="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content">
-            <a href="#">Europe</a>
+            <div className="dropdown-content">
+              <a href="#">Europe</a>
               <a href="#">Dubai</a>
               <a href="#">Thailand</a>
               <a href="#">Singapore</a>
@@ -39,87 +48,127 @@ const Navbar = () => {
           </div>
         </li>
         <li>
-          <div class="dropdown">
-            <button class="dropbtn font-bold">
+          <div className="dropdown">
+            <button className="dropbtn font-bold">
               Beaches
-              <i class="fa fa-caret-down"></i>
+              <i className="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <a href="#">Bali</a>
               <a href="#">Maldives</a>
               <a href="#">Mauritius</a>
             </div>
           </div>
         </li>
-        <li>
-          <div class="dropdown">
-            <button class="dropbtn font-bold">
-              Dropdown
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </div>
-        </li>
       </ul>
-      <div className="hidden md:flex"></div>
+      <div className="hidden md:flex">
+        <div className="flex px-2">
+          <img className="rounded-t-lg px-2" src={phone} alt="" />
+          <h3>+91-7973358026</h3>
+        </div>
+        <div className="flex">
+          <img className="rounded-t-lg px-2" src={mail} alt="" />
+          <h3>atollvacations@gmail.com</h3>
+        </div>
+      </div>
       {!navIsShown && (
         <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
           strokeWidth={1.5}
-          stroke='currentColor'
-          className='w-6 h-6 md:hidden'
+          stroke="currentColor"
+          className="w-6 h-6 md:hidden"
           onClick={toggleNavIsShown}
         >
           <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            d='M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25'
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
           />
         </svg>
       )}
       {navIsShown && (
-        <div className='md:hidden absolute z-10 top-0 left-0 w-full bg-gray-100/90 text-black px-4 py-6'>
-          <div className='flex justify-between'>
-            <h1>Beaches.</h1>
+        <div className="md:hidden absolute z-10 top-0 left-0 w-full bg-gray-100/90 text-black px-4 py-6">
+          <div className="flex justify-between">
+            <h1>Atoll Vacations</h1>
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke='currentColor'
-              className='w-6 h-6'
+              stroke="currentColor"
+              className="w-6 h-6"
               onClick={toggleNavIsShown}
             >
               <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M6 18L18 6M6 6l12 12'
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </div>
-          <ul className=' mb-4'>
+          <ul className="flex flex-col mb-4">
             <li>
-              <a href=''>Home</a>
+              <div className="dropdown">
+                <button className="dropbtn1 font-bold">
+                  Home
+                  <i className="fa fa-caret-down"></i>
+                </button>
+              </div>
             </li>
             <li>
-              <a href=''>Destinations</a>
+              <div className="dropdown">
+                <button className="dropbtn1 font-bold">
+                  Domestic
+                  <i className="fa fa-caret-down"></i>
+                </button>
+                <div className="dropdown-content">
+                  <a href="#">Himachal Pradesh</a>
+                  <a href="#">Rajasthan</a>
+                  <a href="#">Kerela</a>
+                  <a href="#">Leh</a>
+                </div>
+              </div>
             </li>
             <li>
-              <a href=''>Travel</a>
+              <div className="dropdown">
+                <button className="dropbtn1 font-bold">
+                  Beaches
+                  <i className="fa fa-caret-down"></i>
+                </button>
+                <div className="dropdown-content">
+                  <a href="#">Bali</a>
+                  <a href="#">Maldives</a>
+                  <a href="#">Mauritius</a>
+                </div>
+              </div>
             </li>
             <li>
-              <a href=''>Views</a>
-            </li>
-            <li>
-              <a href=''>Book</a>
+              <div className="dropdown">
+                <button className="dropbtn1 font-bold">
+                  International
+                  <i className="fa fa-caret-down"></i>
+                </button>
+                <div className="dropdown-content">
+                  <a href="#">Europe</a>
+                  <a href="#">Dubai</a>
+                  <a href="#">Thailand</a>
+                  <a href="#">Singapore</a>
+                </div>
+              </div>
             </li>
           </ul>
+          <div>
+            <div className="flex mb-2">
+              <img className="rounded-t-lg px-2" src={phone} alt="" />
+              <h3>+91-7973358026</h3>
+            </div>
+            <div className="flex">
+              <img className="rounded-t-lg px-2" src={mail} alt="" />
+              <h3>atollvacations@gmail.com</h3>
+            </div>
+          </div>
         </div>
       )}
     </nav>
