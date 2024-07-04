@@ -173,7 +173,7 @@ export const locationData = [
   },
   {
     id: 15,
-    value: "HIMACHAL",
+    value: "HIMACHAL PRADESH",
     image: "",
     packages: [
       {

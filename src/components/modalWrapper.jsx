@@ -6,6 +6,7 @@ import emailjs from 'emailjs-com';
 import toast, { Toaster } from 'react-hot-toast';
 
 const ModalWrapper = (props) => {
+  console.log(props.selectedLocation)
   const [formOpen, setOpenForm] = useState(false)
   const [packageSelected,setPackageSelected] = useState({})
   return (

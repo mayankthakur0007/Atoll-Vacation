@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import mail from '../assets/mail.png';
 import phone from "../assets/phone.png";
+import ModalWrapper from "./modalWrapper";
+
 const Navbar = () => {
   const [navIsShown, setnavIsShown] = useState(false);
   const toggleNavIsShown = () => {
     setnavIsShown((navIsShown) => !navIsShown);
   };
+  const [open, setOpen] = useState(false);
+  const [selectedLocation,setSelectedLocation] = useState()
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
   return (
     <nav className="flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-white">
       <img className="mt-16" src={logo} width={200} height={100} />
@@ -26,10 +32,38 @@ const Navbar = () => {
               <i className="fa fa-caret-down"></i>
             </button>
             <div className="dropdown-content">
-              <a href="#">Himachal Pradesh</a>
-              <a href="#">Rajasthan</a>
-              <a href="#">Kerela</a>
-              <a href="#">Leh</a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Himachal Pradesh
+              </a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Rajasthan
+              </a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Kerela
+              </a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Leh
+              </a>
             </div>
           </div>
         </li>
@@ -40,10 +74,38 @@ const Navbar = () => {
               <i className="fa fa-caret-down"></i>
             </button>
             <div className="dropdown-content">
-              <a href="#">Europe</a>
-              <a href="#">Dubai</a>
-              <a href="#">Thailand</a>
-              <a href="#">Singapore</a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Cordelia Cruise
+              </a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Dubai
+              </a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Thailand
+              </a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Singapore
+              </a>
             </div>
           </div>
         </li>
@@ -54,9 +116,30 @@ const Navbar = () => {
               <i className="fa fa-caret-down"></i>
             </button>
             <div className="dropdown-content">
-              <a href="#">Bali</a>
-              <a href="#">Maldives</a>
-              <a href="#">Mauritius</a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Bali
+              </a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Maldives
+              </a>
+              <a
+                onClick={(e) => {
+                  setSelectedLocation(e.target.innerText.toUpperCase());
+                  onOpenModal();
+                }}
+              >
+                Mauritius
+              </a>
             </div>
           </div>
         </li>
@@ -124,10 +207,38 @@ const Navbar = () => {
                   <i className="fa fa-caret-down"></i>
                 </button>
                 <div className="dropdown-content">
-                  <a href="#">Himachal Pradesh</a>
-                  <a href="#">Rajasthan</a>
-                  <a href="#">Kerela</a>
-                  <a href="#">Leh</a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Himachal Pradesh
+                  </a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Rajasthan
+                  </a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Kerela
+                  </a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Leh
+                  </a>
                 </div>
               </div>
             </li>
@@ -138,9 +249,30 @@ const Navbar = () => {
                   <i className="fa fa-caret-down"></i>
                 </button>
                 <div className="dropdown-content">
-                  <a href="#">Bali</a>
-                  <a href="#">Maldives</a>
-                  <a href="#">Mauritius</a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Bali
+                  </a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Maldives
+                  </a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Mauritius
+                  </a>
                 </div>
               </div>
             </li>
@@ -151,10 +283,38 @@ const Navbar = () => {
                   <i className="fa fa-caret-down"></i>
                 </button>
                 <div className="dropdown-content">
-                  <a href="#">Europe</a>
-                  <a href="#">Dubai</a>
-                  <a href="#">Thailand</a>
-                  <a href="#">Singapore</a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Cordelia Cruise
+                  </a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Dubai
+                  </a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Thailand
+                  </a>
+                  <a
+                    onClick={(e) => {
+                      setSelectedLocation(e.target.innerText.toUpperCase());
+                      onOpenModal();
+                    }}
+                  >
+                    Singapore
+                  </a>
                 </div>
               </div>
             </li>
@@ -171,6 +331,11 @@ const Navbar = () => {
           </div>
         </div>
       )}
+      <ModalWrapper
+        open={open}
+        selectedLocation={selectedLocation}
+        onClose={onCloseModal}
+      />
     </nav>
   );
 };
