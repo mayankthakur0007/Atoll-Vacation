@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { locationData } from "../data";
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
-import { PackageContext } from '../context';
+import { AppContext } from '../context';
 import { Toaster } from 'react-hot-toast';
 
 const ModalWrapper = (props) => {
@@ -20,6 +20,7 @@ const ModalWrapper = (props) => {
         }}
         classNames={{
           modal: "md:w-108",
+          closeIcon: "fill-white"
         }}
         center
       >
@@ -36,18 +37,18 @@ const ModalWrapper = (props) => {
                 </a>
                 <div className="p-5">
                   <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-black-900 dark:text-white">
                       {ele.plan}
                     </h5>
                   </a>
-                  <p className="mb-3 font-normal text-white dark:text-white">
+                  <p className="mb-3 font-normal text-black dark:text-white">
                     ₹{ele.price} per person
                   </p>
                   <ul className="points">
                     {ele?.points.map((p) => (
                       <>
-                        <li className="font-normal text-white dark:text-white">
-                          {p}
+                        <li className="font-normal font-3xl text-black dark:text-white">
+                          {p.toUpperCase()}
                         </li>
                       </>
                     ))}

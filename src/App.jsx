@@ -9,21 +9,22 @@ import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import Features from './components/features';
 import SelectionsD from './components/SelectionsD';
-import { PackageContext } from './context';
+import { AppContext } from './context';
 
 const App = () => {
   const [selectedPackage,setSelectedLocation] = useState('')
-  const setLocation = (e)=>{
-    setSelectedLocation(e);
-  }
+  const dispatchUserEvent = (actionType, payload) => {
+		switch (actionType) {
+			case 'SET':
+				setSelectedLocation(payload);
+				return;
+			default:
+				return;
+		}
+	};
 
   return (
-    <PackageContext.Provider
-      value={{
-        selectedPackage,
-        setLocation,
-      }}
-    >
+    <AppContext.Provider>
       <div className="font-['Caveat']">
         <Navbar />
         <Hero />
@@ -35,7 +36,7 @@ const App = () => {
         <Carousel />
         <Footer />
       </div>
-    </PackageContext.Provider>
+    </AppContext.Provider>
   );
 };
 

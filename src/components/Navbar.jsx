@@ -3,14 +3,14 @@ import logo from "../assets/logo.png";
 import mail from '../assets/mail.png';
 import phone from "../assets/phone.png";
 import ModalWrapper from "./modalWrapper";
-import { PackageContext } from "../context";
+import { AppContext } from "../context";
 
 const Navbar = () => {
   const [navIsShown, setnavIsShown] = useState(false);
   const toggleNavIsShown = () => {
     setnavIsShown((navIsShown) => !navIsShown);
   };
-  const selectedPackage = 'useContext(PackageContext);'
+  const selectedPackage = useContext(AppContext);
 
   const [open, setOpen] = useState(false);
   const [selectedLocation,setSelectedLocation] = useState()
@@ -23,7 +23,7 @@ const Navbar = () => {
         <li>
           <div className="dropdown">
             <button className="dropbtn font-bold">
-              Home
+              Home {selectedPackage || "dfs"}
               <i className="fa fa-caret-down"></i>
             </button>
           </div>
