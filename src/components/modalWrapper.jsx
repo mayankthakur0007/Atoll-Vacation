@@ -20,7 +20,7 @@ const ModalWrapper = (props) => {
         }}
         classNames={{
           modal: "md:w-108",
-          closeIcon: "fill-white"
+          closeButton:"top-0,right-0"
         }}
         center
       >
