@@ -31,7 +31,7 @@ const Selections = () => {
           figure={borabora2}
           caption="Maldives"
           duration="3N/4D"
-          price="₹65,700"
+          price="₹35,999"
         />
         <Selection
           figure={maldives1}

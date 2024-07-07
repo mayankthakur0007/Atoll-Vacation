@@ -98,7 +98,7 @@ export const locationData = [
     packages: [
       {
         id: "1",
-        price: "65,700",
+        price: "35,999",
         plan: "4N/5D",
         points: [
           "4 nights stay at Good resort",
