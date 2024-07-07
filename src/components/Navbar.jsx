@@ -23,7 +23,7 @@ const Navbar = () => {
         <li>
           <div className="dropdown">
             <button className="dropbtn font-bold">
-              Home {selectedPackage || "dfs"}
+              Home
               <i className="fa fa-caret-down"></i>
             </button>
           </div>
