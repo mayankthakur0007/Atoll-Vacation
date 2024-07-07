@@ -1,21 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import logo from "../assets/logo.png";
 import mail from '../assets/mail.png';
 import phone from "../assets/phone.png";
 import ModalWrapper from "./modalWrapper";
+import { PackageContext } from "../context";
 
 const Navbar = () => {
   const [navIsShown, setnavIsShown] = useState(false);
   const toggleNavIsShown = () => {
     setnavIsShown((navIsShown) => !navIsShown);
   };
+  const selectedPackage = 'useContext(PackageContext);'
+
   const [open, setOpen] = useState(false);
   const [selectedLocation,setSelectedLocation] = useState()
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
   return (
     <nav className="flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-white">
-      <img className="mt-16" src={logo} width={200} height={100} />
+      <img className="relative top-24 left-16 mb-16" src={logo} width={200} height={100} />
       <ul className="hidden rounded-2xl md:flex">
         <li>
           <div className="dropdown">
@@ -154,7 +157,8 @@ const Navbar = () => {
           <h3>atollvacations@gmail.com</h3>
         </div>
       </div>
-      {!navIsShown && (
+      {!navIsShown && (<>
+        <div className="px-4"></div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -170,6 +174,7 @@ const Navbar = () => {
             d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
           />
         </svg>
+        </>
       )}
       {navIsShown && (
         <div className="md:hidden absolute z-10 top-0 left-0 w-full bg-gray-100/90 text-black px-4 py-6">

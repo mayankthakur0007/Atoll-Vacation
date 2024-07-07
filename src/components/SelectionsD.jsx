@@ -22,39 +22,39 @@ const SelectionsD = () => {
       <section className="container px-4 grid gap-2 sm:grid-cols-3 sm:grid-rows-2">
         <Selection
           figure={himachal}
-          caption="Himachal"
+          caption="Himachal Pradesh"
           duration="3N/4D"
-          price="₹21,000"
+          price="₹14,999"
         />
         <Selection
           figure={rajasthan}
           caption="Rajasthan"
           duration="3N/4D"
-          price="₹40,000"
+          price="₹28,500"
         />
         <Selection
           figure={kerela}
           caption="Kerela"
           duration="4N/5D"
-          price="₹35,000"
+          price="₹15,500"
         />
         <Selection
           figure={goa}
           caption="Goa"
           duration="3N/4D"
-          price="₹77,000"
+          price="₹15,500"
         />
         <Selection
           figure={leh}
           caption="Leh"
-          duration="3N/4D"
-          price="₹22,000"
+          duration="5N/6D"
+          price="₹18,310"
         />
         <Selection
           figure={Kashmir}
           caption="Kashmir"
           duration="4N/5D"
-          price="₹22,000"
+          price="₹14,999"
         />
       </section>
     </>

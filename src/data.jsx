@@ -28,11 +28,26 @@ export const locationData = [
         image: bali,
         points: [
           "4 Nights stay at hotel with Breakfast",
-          " Kintamani Ubud tour",
+          "Kintamani Ubud tour",
           "Nusa Penida tour with Lunch -Snorkelling",
           "Water sports -Jet ski, Parasailing and Banana boat Ride",
           "Tanah Lot temple tour",
           "All transfer",
+        ],
+      },
+      {
+        id: "2",
+        price: "25,999",
+        plan: "5N/6D",
+        image: bali,
+        points: [
+          "2 NIGHTS STAY AT UBUD WITH BREAKFAST",
+          "3 NIGHTS STAY AT KUTA/SEMINYAK WITH BREAKFAST",
+          "AIRPORT TRANSFER ROUND-TRIP ON PRIVATE",
+          "KIMTAMANI TOUR WITH UBUD MARKET",
+          "BALI SWING",
+          "TANAH LOT TEMPLE TOUR",
+          "NUSA PENIDA TOUR WITH LUNCH",
         ],
       },
     ],
@@ -53,6 +68,24 @@ export const locationData = [
           "Dhow Marina cruise with International buffet dinner",
           "Dessert safari with BBQ dinner belly dance",
           "Burj khalifa 124th Floor with entry tickets Visa",
+        ],
+        image: dubai1,
+      },
+      {
+        id: 2,
+        price: "39,900",
+        plan: "5N/6D",
+        points: [
+          "5 nights accommodation at good hotels with breakfast",
+          "Airport to hotel round-trip transfer on private basis",
+          "City tour of Dubai",
+          "Dhow marina cruise with Dinner",
+          "Desert safari with BBQ dinner",
+          "Burj khalifa 124th floor",
+          "Fountain show",
+          "Dubai Mall",
+          "Future of museum",
+          "Visa",
         ],
         image: dubai1,
       },
@@ -99,6 +132,20 @@ export const locationData = [
           "Pattaya to Bangkok hotel transfer",
           "City tour of Bangkok",
           "Bangkok hotel to Bangkok airport transfer",
+        ],
+        image: thailand1,
+      },
+      {
+        id: "2",
+        price: "24,999",
+        plan: "5N/6D",
+        points: [
+          "5 nights stay at good hotels with breakfast",
+          "Airport to hotel round-trip transfer",
+          "City tour of Bangkok",
+          "Coral island with lunch",
+          "Safari world and marine park",
+          "All tours and transfers on private",
         ],
         image: thailand1,
       },
@@ -189,8 +236,25 @@ export const locationData = [
         ],
         plan: "5N/6D",
         image: himachal,
-
       },
+      {
+        id: "2",
+        price: "24,500",
+        points: [
+          '2 nights Shimla at good hotels', 
+          '3 nights Manali stay at good hotels', 
+          'Breakfast and dinner',
+          'Pick up and drop from Chandigarh or Delhi', 
+          'Solang vally trip', 
+          'Kufri trip',
+          'Manali local city tour', 
+          'Mall road', 
+          'Manikaran sahib and kullu trip', 
+          'All tours and transfers on private basis'
+        ],
+        plan: "5N/6D",
+        image: himachal,
+      }
     ],
   },
   {
@@ -222,7 +286,7 @@ export const locationData = [
     packages: [
       {
         id: "1",
-        price: "14,999",
+        price: "28,500",
         points: [
           "3 Nights accommodation in Jaipur",
           "3* Good rating Hotels",
@@ -265,7 +329,7 @@ export const locationData = [
     packages: [
       {
         id: "1",
-        price: "12,400",
+        price: "15,500",
         points: [
           "3 Nights stay at Good Resort",
           "Breakfast included",
@@ -308,7 +372,7 @@ export const locationData = [
     packages: [
       {
         id: "1",
-        price: "19,999",
+        price: "15,500",
         points: [
           "Accommodation in Hotel/Resorts/Houseboat",
           "Rs 1,00,000 accidental insurance for each traveler.",
@@ -322,21 +386,21 @@ export const locationData = [
   },
   {
     id: 23,
-    value: "ITALY",
+    value: "EUROPE",
     image: "",
     packages: [
       {
         id: "1",
-        price: "77,000",
+        price: "59,400",
         image: italy,
         points: [
           "Accommodation in 3 Star Hotels",
           "Hotel pickup and drop-off",
           "Ferry tranfer",
           "All sightseeing as per itinerary.",
-          "English Speaking Local Guides"
+          "English Speaking Local Guides",
         ],
-        plan: "2N/3D",
+        plan: "6N/7D",
       },
     ],
   },
@@ -356,6 +420,20 @@ export const locationData = [
           "Hotel activities (snorkelling, kayaking, wind surfing, pedal boat, glass bottom boat)",
         ],
         plan: "4N/5D",
+      },
+      {
+        id: "2",
+        price: "38,999",
+        image: maur,
+        points: [
+          "6 nights accommodation at good resort on beach",
+          "Breakfast and dinner",
+          "Airport round-trip transfer",
+          "North Island tour",
+          "South Island tour",
+          "Ile Aux cerfs tour",
+        ],
+        plan: "6N/7D",
       },
     ],
   },

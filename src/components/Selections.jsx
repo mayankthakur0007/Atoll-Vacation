@@ -25,25 +25,25 @@ const Selections = () => {
           figure={borabora1}
           caption="Bali"
           duration="3N/4D"
-          price="₹21,000"
+          price="₹25,999"
         />
         <Selection
           figure={borabora2}
           caption="Maldives"
           duration="3N/4D"
-          price="₹40,000"
+          price="₹65,700"
         />
         <Selection
           figure={maldives1}
           caption="Dubai"
           duration="4N/5D"
-          price="₹35,000"
+          price="₹32,550"
         />
         <Selection
           figure={maldives2}
-          caption="Italy"
+          caption="Europe"
           duration="2N/3D"
-          price="₹77,000"
+          price="₹59,400"
         />
         <Selection
           figure={maldives3}
@@ -55,7 +55,7 @@ const Selections = () => {
           figure={keywest}
           caption="Thailand"
           duration="4N/5D"
-          price="₹22,000"
+          price="₹15,999"
         />
       </section>
     </>
