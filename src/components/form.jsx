@@ -5,12 +5,13 @@ import { AppContext } from "../context";
 
 export const Form = (props) => {
   const {selectedPackage} = useContext(AppContext);
+  const {setPackage} = useContext(AppContext);
 
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
       <form
-        class="font-['Caveat'] bg-yellow-300"
+        class="font-['Caveat'] bg-yellow-300 pt-4"
         onSubmit={(e) => {
           e.preventDefault();
           emailjs
@@ -25,8 +26,7 @@ export const Form = (props) => {
                 toast.success(
                   "Query submitted successfully. We'll get back to you shortly"
                 );
-                setPackageSelected({});
-                //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+                setPackage("");
               },
               (error) => {
                 console.log(error.text);
@@ -39,7 +39,7 @@ export const Form = (props) => {
             type="email"
             name="from_email"
             id="floating_email"
-            class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block py-2.5 px-0 w-full text-xl text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
           />
