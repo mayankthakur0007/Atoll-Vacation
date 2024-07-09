@@ -1,11 +1,16 @@
 import bali from './assets/bali.jpg';
+import bali2 from './assets/bali2.jpg';
 import maldives1 from './assets/maldives1.jpg';
 import dubai1 from './assets/dubai.jpg';
+import dubai2 from './assets/dubai2.jpg';
 import thailand1 from './assets/thailand1.jpg';
+import thailand2 from './assets/thailand2.jpg';
 import singapore1 from './assets/singapore1.jpg';
 import italy from './assets/italy3.jpg';
 import maur from './assets/mauritius1.jpg';
+import maur2 from './assets/mauritius2.jpg';
 import himachal from './assets/himachal.jpg';
+import him from './assets/him.jpg';
 import rajasthan from './assets/rajasthan.jpg';
 import goa from './assets/goa.jpg';
 import leh from './assets/leh.jpg';
@@ -23,7 +28,7 @@ export const locationData = [
     packages: [
       {
         id: "1",
-        price: "38,316",
+        price: "17,800",
         plan: "4N/5D",
         image: bali,
         points: [
@@ -37,9 +42,9 @@ export const locationData = [
       },
       {
         id: "2",
-        price: "25,999",
+        price: "21,999",
         plan: "5N/6D",
-        image: bali,
+        image: bali2,
         points: [
           "2 NIGHTS STAY AT UBUD WITH BREAKFAST",
           "3 NIGHTS STAY AT KUTA/SEMINYAK WITH BREAKFAST",
@@ -87,7 +92,7 @@ export const locationData = [
           "Future of museum",
           "Visa",
         ],
-        image: dubai1,
+        image: dubai2,
       },
     ],
   },
@@ -147,7 +152,7 @@ export const locationData = [
           "Safari world and marine park",
           "All tours and transfers on private",
         ],
-        image: thailand1,
+        image: thailand2,
       },
     ],
   },
@@ -235,7 +240,7 @@ export const locationData = [
           "Minimum 2 person required",
         ],
         plan: "5N/6D",
-        image: himachal,
+        image: him,
       },
       {
         id: "2",
@@ -400,7 +405,7 @@ export const locationData = [
           "All sightseeing as per itinerary.",
           "English Speaking Local Guides",
         ],
-        plan: "6N/7D",
+        plan: "5N/6D",
       },
     ],
   },
@@ -424,7 +429,7 @@ export const locationData = [
       {
         id: "2",
         price: "38,999",
-        image: maur,
+        image: maur2,
         points: [
           "6 nights accommodation at good resort on beach",
           "Breakfast and dinner",

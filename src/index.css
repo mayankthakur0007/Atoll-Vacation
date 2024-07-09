@@ -114,6 +114,11 @@
   }
 }
 
+.done{
+  top: 0;
+  right: 0;
+}
+
 @layer utilities {
   .container {
     @apply w-full max-w-6xl mx-auto;

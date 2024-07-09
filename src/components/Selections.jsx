@@ -1,7 +1,5 @@
 import React from 'react';
-
 import Selection from './Selection';
-
 import borabora1 from '../assets/bali.jpg';
 import borabora2 from '../assets/borabora2.jpg';
 import maldives1 from '../assets/dubai.jpg';
@@ -24,13 +22,13 @@ const Selections = () => {
         <Selection
           figure={borabora1}
           caption="Bali"
-          duration="3N/4D"
-          price="₹25,999"
+          duration="4N/5D"
+          price="₹17,800"
         />
         <Selection
           figure={borabora2}
           caption="Maldives"
-          duration="3N/4D"
+          duration="4N/5D"
           price="₹35,999"
         />
         <Selection
@@ -42,7 +40,7 @@ const Selections = () => {
         <Selection
           figure={maldives2}
           caption="Europe"
-          duration="2N/3D"
+          duration="5N/6D"
           price="₹59,400"
         />
         <Selection

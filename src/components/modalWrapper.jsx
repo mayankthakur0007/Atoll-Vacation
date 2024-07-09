@@ -6,7 +6,7 @@ import { AppContext } from '../context';
 import { Toaster } from 'react-hot-toast';
 
 const ModalWrapper = (props) => {
-  // const {setLocation} = useContext(PackageContext);
+  const {setPackage} = useContext(AppContext);
 
   return (
     <div>
@@ -20,7 +20,7 @@ const ModalWrapper = (props) => {
         }}
         classNames={{
           modal: "md:w-108",
-          closeButton:"top-0,right-0"
+          closeButton: "done",
         }}
         center
       >
@@ -55,7 +55,10 @@ const ModalWrapper = (props) => {
                   </ul>
                   <button
                     onClick={() => {
-                      setLocation(ele);
+                      setPackage(
+                        `${props.selectedLocation} ${ele.plan} ${ele.price}`
+                      );
+                      props.onClose();
                     }}
                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >

@@ -10,6 +10,9 @@ module.exports = {
           200: '#5651e5'
         },
       },
+      aspectRatio: {
+        '3/2': '3 / 2',
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },

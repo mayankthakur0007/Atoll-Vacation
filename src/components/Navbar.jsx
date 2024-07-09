@@ -4,25 +4,36 @@ import mail from '../assets/mail.png';
 import phone from "../assets/phone.png";
 import ModalWrapper from "./modalWrapper";
 import { AppContext } from "../context";
+import { SocialIcon } from 'react-social-icons/component'
+import 'react-social-icons/facebook'
+import 'react-social-icons/instagram'
 
 const Navbar = () => {
   const [navIsShown, setnavIsShown] = useState(false);
   const toggleNavIsShown = () => {
     setnavIsShown((navIsShown) => !navIsShown);
   };
-  const selectedPackage = useContext(AppContext);
-
+  const {setPackage} = useContext(AppContext);
   const [open, setOpen] = useState(false);
   const [selectedLocation,setSelectedLocation] = useState()
   const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
+  const onCloseModal = () => {
+    setOpen(false);
+    toggleNavIsShown();
+  };
   return (
-    <nav className="flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-white">
-      <img className="relative top-24 left-16 mb-16" src={logo} width={200} height={100} />
+    <nav className="flex justify-between md:justify-center bg-black items-center h-20 px-4 z-10 w-full text-white">
+      <img
+        className="max-w-full max-h-full aspect-[3/2] object-contain "
+        src={logo}
+      />
       <ul className="hidden rounded-2xl md:flex">
         <li>
           <div className="dropdown">
-            <button className="dropbtn font-bold">
+            <button
+              onClick={() => setPackage("")}
+              className="dropbtn font-bold"
+            >
               Home
               <i className="fa fa-caret-down"></i>
             </button>
@@ -153,27 +164,44 @@ const Navbar = () => {
           <h3>+91-7973358026</h3>
         </div>
         <div className="flex">
-          <img className="rounded-t-lg px-2" src={mail} alt="" />
+          <img className="rounded-t-lg" src={mail} alt="" />
           <h3>atollvacations@gmail.com</h3>
         </div>
       </div>
-      {!navIsShown && (<>
-        <div className="px-4"></div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6 md:hidden"
-          onClick={toggleNavIsShown}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+      <div className="hidden md:flex">
+        <div>
+          <SocialIcon
+            href="https://www.facebook.com/profile.php?id=61562134552280&mibextid=ZbWKwL"
+            className="mx-4"
+            url="www.facebook.com"
           />
-        </svg>
+        </div>
+        <div>
+          <SocialIcon
+            href="https://www.instagram.com/atollvacations?igsh=MTNrdHg4b3Brc3BseA=="
+            className="mx-4"
+            url="www.instagram.com"
+          />
+        </div>
+      </div>
+      {!navIsShown && (
+        <>
+          <div className="px-4"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 md:hidden"
+            onClick={toggleNavIsShown}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+            />
+          </svg>
         </>
       )}
       {navIsShown && (
@@ -199,7 +227,10 @@ const Navbar = () => {
           <ul className="flex flex-col mb-4">
             <li>
               <div className="dropdown">
-                <button className="dropbtn1 font-bold">
+                <button
+                  onClick={() => setPackage("")}
+                  className="dropbtn1 font-bold"
+                >
                   Home
                   <i className="fa fa-caret-down"></i>
                 </button>
@@ -332,6 +363,22 @@ const Navbar = () => {
             <div className="flex">
               <img className="rounded-t-lg px-2" src={mail} alt="" />
               <h3>atollvacations@gmail.com</h3>
+            </div>
+          </div>
+          <div className="flex flex-row">
+            <div>
+              <SocialIcon
+                href="https://www.facebook.com/profile.php?id=61562134552280&mibextid=ZbWKwL"
+                className="mx-2 mt-2"
+                url="www.facebook.com"
+              />
+            </div>
+            <div>
+              <SocialIcon
+                href="https://www.instagram.com/atollvacations?igsh=MTNrdHg4b3Brc3BseA=="
+                className="mx-2 mt-2"
+                url="www.instagram.com"
+              />
             </div>
           </div>
         </div>

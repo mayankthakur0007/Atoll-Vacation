@@ -10,30 +10,33 @@ import Footer from './components/Footer';
 import Features from './components/features';
 import SelectionsD from './components/SelectionsD';
 import { AppContext } from './context';
+import {Form} from './components/form'
 
 const App = () => {
   const [selectedPackage,setSelectedLocation] = useState('')
-  const dispatchUserEvent = (actionType, payload) => {
-		switch (actionType) {
-			case 'SET':
-				setSelectedLocation(payload);
-				return;
-			default:
-				return;
-		}
-	};
+  const setPackage=(e)=>{
+    console.log(e);
+    setSelectedLocation(e);
+  }
 
   return (
-    <AppContext.Provider>
+    <AppContext.Provider value={{ selectedPackage, setPackage }}>
       <div className="font-['Caveat']">
         <Navbar />
-        <Hero />
-        <Destinations />
-        <Selections />
-        <Search />
-        <SelectionsD />
-        <Features />
-        <Carousel />
+
+        {selectedPackage ? (
+          <Form />
+        ) : (
+          <>
+            <Hero />
+            <Destinations />
+            <Selections />
+            <Search />
+            <SelectionsD />
+            <Features />
+            <Carousel />
+          </>
+        )}
         <Footer />
       </div>
     </AppContext.Provider>
